@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus.io | Engenharia de Software & Design Premium</title>
+    <meta name="description" content="Estúdio premium de engenharia de software e design de interfaces. SaaS, plataformas de alta escalabilidade e aplicações web rápidas.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-grid"></div>
+    <nav class="top-nav">
+        <div class="nav-left">
+            <a href="nexusio.html" class="brand-mark">
+                <!-- Inline SVG Logo (Interlocking Nexus Geometry) -->
+                <svg class="logo-svg" width="22" height="22" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.6));">
+                    <defs>
+                        <linearGradient id="nexus-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#8b5cf6" />
+                            <stop offset="100%" stop-color="#ec4899" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M16 2 L29 26 H3 L16 2 Z" stroke="url(#nexus-grad)" stroke-width="2" stroke-linejoin="round" opacity="0.4" />
+                    <path d="M16 8 L23 21 H9 L16 8 Z" stroke="url(#nexus-grad)" stroke-width="2" stroke-linejoin="round" />
+                    <circle cx="16" cy="16" r="3" fill="url(#nexus-grad)" />
+                    <circle cx="16" cy="16" r="8" stroke="url(#nexus-grad)" stroke-width="1" stroke-dasharray="3 3" opacity="0.6" />
+                </svg>
+                <span>Nexus.io</span>
+            </a>
+            <div class="nav-links">
+                <a href="#expertise">Expertise</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#metodo">Metodologia</a>
+                <a href="processo.html">Processo</a>
+            </div>
+        </div>
+        <div class="nav-right">
+            <a href="processo.html" class="button-secondary">Ver Processo</a>
+            <a href="https://wa.me/5588999999999?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20desenvolver%20um%20projeto%20com%20a%20Nexus.io." target="_blank" class="button-primary">Fale Conosco</a>
+        </div>
+        <button class="mobile-menu-toggle">☰</button>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content fade-in-up">
+                <div class="status-badge" onclick="window.open('https://instagram.com/nexus.io.dev', '_blank')">
+                    <span class="badge-dot"></span>
+                    <span>Disponível para novos projetos &mdash; @nexus.io.dev</span>
+                </div>
+                <h1 class="display-xl">Construímos produtos digitais <span class="text-gradient">extraordinários</span>.</h1>
+                <p class="body-lg hero-subhead">Estúdio de engenharia de elite que transforma ideias complexas em produtos SaaS rápidos, aplicações web seguras e interfaces deslumbrantes.</p>
+                <div class="hero-ctas">
+                    <a href="https://wa.me/5588999999999?text=Olá!%20Quero%20fazer%20um%20orçamento%20para%20meu%20projeto." target="_blank" class="button-primary button-large">Solicitar Orçamento</a>
+                    <a href="#expertise" class="button-secondary button-large">Ver Serviços</a>
+                </div>
+                <!-- Stats row — social proof numbers (Linear/Vercel pattern) -->
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">48+</span>
+                        <span class="hero-stat-label">Projetos entregues</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">&lt;12ms</span>
+                        <span class="hero-stat-label">Tempo de resposta médio</span>
+                    </div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat">
+                        <span class="hero-stat-value">100%</span>
+                        <span class="hero-stat-label">Satisfação dos clientes</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Glowing cosmos orb behind the product mockup -->
+            <div class="glow-orb"></div>
+
+            <!-- Interactive Cursor-style Product Showcase -->
+            <div class="product-showcase fade-in-up">
+                <div class="product-screenshot-card">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="mockup-title">nexus-io // developer-studio</div>
+                    </div>
+                    <div class="showcase-container">
+                        <!-- Left Panel: The Code (Cursor style with Next.js Stripe action code) -->
+                        <div class="ide-panel">
+                            <div class="ide-header-bar">
+                                <div class="ide-tab">
+                                    <span class="tab-icon">TS</span>
+                                    <span>stripe-action.ts</span>
+                                </div>
+                            </div>
+                            <div class="code-area">
+                                <pre><code><span class="keyword">import</span> { stripe } <span class="keyword">from</span> <span class="string">"@/lib/stripe"</span>;
+
+<span class="keyword">export async function</span> <span class="function">createBillingPortal</span>(customerId: <span class="class">string</span>) {
+  <span class="comment">// Inicializando portal de faturamento recorrente</span>
+  <span class="keyword">const</span> session = <span class="keyword">await</span> stripe.billingPortal.sessions.<span class="function">create</span>({
+    customer: customerId,
+    return_url: <span class="string">"https://nexus.io/dashboard"</span>,
+  });
+
+  <span class="keyword">return</span> session.url;
+}</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- Right Panel: Live UI Showcase (React/Next.js dashboard mockup) -->
+                        <div class="preview-panel">
+                            <div class="preview-header">
+                                <div class="preview-dot"></div>
+                                <div class="preview-url">http://localhost:3000/dashboard</div>
+                            </div>
+                            <div class="preview-content">
+                                <div class="mini-dash">
+                                    <div class="mini-header">
+                                        <div class="brand-mark" style="font-size: 13px;">
+                                            <!-- Mini inline logo -->
+                                            <svg class="logo-svg" width="12" height="12" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M16 2 L29 26 H3 L16 2 Z" stroke="url(#nexus-grad)" stroke-width="2" stroke-linejoin="round" />
+                                            </svg>
+                                            <span>Nexus Dash</span>
+                                        </div>
+                                        <div class="mini-nav-lines">
+                                            <span></span><span></span>
+                                        </div>
+                                    </div>
+                                    <div class="mini-metrics">
+                                        <div class="metric-card">
+                                            <span class="metric-label">API Speed</span>
+                                            <span class="metric-val" id="api-speed">12ms</span>
+                                        </div>
+                                        <div class="metric-card">
+                                            <span class="metric-label">MRR Growth</span>
+                                            <span class="metric-val" id="mrr-growth">+48.2%</span>
+                                        </div>
+                                    </div>
+                                    <div class="mini-chart-container">
+                                        <div class="mini-chart-bar" style="height: 30%"></div>
+                                        <div class="mini-chart-bar" style="height: 45%"></div>
+                                        <div class="mini-chart-bar" style="height: 35%"></div>
+                                        <div class="mini-chart-bar" style="height: 65%"></div>
+                                        <div class="mini-chart-bar" style="height: 55%"></div>
+                                        <div class="mini-chart-bar" style="height: 85%"></div>
+                                        <div class="mini-chart-bar" style="height: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Console output at the bottom -->
+                    <div class="console-panel">
+                        <div class="console-line">
+                            <span class="console-time">[21:42:01]</span>
+                            <span class="console-tag tag-ai">NEXUS-LOG:</span>
+                            <span>Compilando ações de servidor e rotas dinâmicas...</span>
+                        </div>
+                        <div class="console-line">
+                            <span class="console-time">[21:42:02]</span>
+                            <span class="console-tag tag-success">COMPILADO:</span>
+                            <span>Módulos de faturamento Stripe carregados com sucesso!</span> <span class="cursor-blink">_</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack Marquee -->
+        <section class="logo-marquee">
+            <p class="eyebrow text-center">Stack de desenvolvimento core</p>
+            <div class="marquee-container">
+                <div class="marquee-track">
+                    <span class="customer-logo">Next.js</span>
+                    <span class="customer-logo">React</span>
+                    <span class="customer-logo">Node.js</span>
+                    <span class="customer-logo">PostgreSQL</span>
+                    <span class="customer-logo">Figma</span>
+                    <span class="customer-logo">Stripe</span>
+                    <span class="customer-logo">TypeScript</span>
+                    <span class="customer-logo">Vercel</span>
+                    <!-- Duplicate for infinite scroll -->
+                    <span class="customer-logo">Next.js</span>
+                    <span class="customer-logo">React</span>
+                    <span class="customer-logo">Node.js</span>
+                    <span class="customer-logo">PostgreSQL</span>
+                    <span class="customer-logo">Figma</span>
+                    <span class="customer-logo">Stripe</span>
+                    <span class="customer-logo">TypeScript</span>
+                    <span class="customer-logo">Vercel</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="features-section">
+            <header class="section-header text-center fade-in-up">
+                <span class="eyebrow">Setores de Atuação</span>
+                <h2 class="display-md mt-2">Nossa Expertise de Engenharia</h2>
+                <p class="subhead mt-2">Combinamos arquiteturas escaláveis com o design mais estético do mercado brasileiro.</p>
+            </header>
+
+            <div class="features-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <!-- SaaS Dev -->
+                <div class="feature-card fade-in-up">
+                    <div class="timeline-pills">
+                        <span class="timeline-pill timeline-pill-thinking">Multi-Tenancy</span>
+                        <span class="timeline-pill timeline-pill-grep">Stripe</span>
+                    </div>
+                    <h3>Desenvolvimento SaaS</h3>
+                    <p class="body-sm mt-2">Construímos produtos de assinatura robustos com faturamento recorrente, painéis de métricas e performance extrema.</p>
+                    <a href="saas.html" class="button-tertiary mt-4" style="padding-left: 0;">Explorar Serviço →</a>
+                </div>
+
+                <!-- Custom Web Apps -->
+                <div class="feature-card fade-in-up">
+                    <div class="timeline-pills">
+                        <span class="timeline-pill timeline-pill-edit">Next.js</span>
+                        <span class="timeline-pill timeline-pill-thinking">APIs</span>
+                    </div>
+                    <h3>Aplicações Web</h3>
+                    <p class="body-sm mt-2">Sistemas de negócios sob medida, portais integrados e painéis administrativos corporativos ultrarápidos.</p>
+                    <a href="web.html" class="button-tertiary mt-4" style="padding-left: 0;">Explorar Serviço →</a>
+                </div>
+
+                <!-- Design UI/UX -->
+                <div class="feature-card fade-in-up">
+                    <div class="timeline-pills">
+                        <span class="timeline-pill timeline-pill-grep">Figma</span>
+                        <span class="timeline-pill timeline-pill-edit">Design System</span>
+                    </div>
+                    <h3>Design UI/UX Premium</h3>
+                    <p class="body-sm mt-2">Interfaces de prestígio visual com alta usabilidade, protótipos de alta fidelidade e consistência garantida.</p>
+                    <a href="uiux.html" class="button-tertiary mt-4" style="padding-left: 0;">Explorar Serviço →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Nós (About Us) Section - INTEGRATED DIRECTLY IN HOME PAGE -->
+        <section id="sobre" class="features-section" style="border-top: 1px solid var(--hairline); padding-top: var(--space-section);">
+            <div class="showcase-container" style="grid-template-columns: 1fr 1.2fr; gap: var(--space-xxl); align-items: center;">
+                <!-- Left: Branding Visual / Interactive Element -->
+                <div class="fade-in-up">
+                    <span class="eyebrow">Sobre o Estúdio</span>
+                    <h2 class="display-md mt-2" style="margin-bottom: 24px;">Engenharia sob medida, design de <span class="text-gradient">prestígio</span>.</h2>
+                    <p class="body-sm" style="color: var(--ink-subtle); margin-bottom: 16px;">Fundada com a premissa de que o software moderno comercial deve ser tão rápido e bonito quanto as melhores ferramentas de código aberto do mundo, a Nexus.io atende clientes exigentes que buscam liderar seus mercados.</p>
+                    <p class="body-sm" style="color: var(--ink-subtle);">Nosso compromisso é com a qualidade do código e a satisfação do cliente final. Não pegamos atalhos que geram dívidas técnicas no futuro. Projetamos soluções prontas para escalabilidade global.</p>
+                </div>
+                <!-- Right: Values Cards / Visual Stats -->
+                <div class="fade-in-up" style="display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                    <div class="feature-card" style="padding: var(--space-lg); background-color: var(--surface-2);">
+                        <div class="status-badge" style="margin-bottom: var(--space-sm); background: rgba(139,92,246,0.1); border-color: rgba(139,92,246,0.2);"><span class="badge-dot" style="background-color: var(--primary); box-shadow: 0 0 8px var(--primary);"></span><span style="color: var(--primary); font-size: 11px;">Engenharia Primeiro</span></div>
+                        <h4 class="card-title" style="font-size: 16px; margin-bottom: 8px;">Código Limpo</h4>
+                        <p class="body-sm" style="font-size: 12px; color: var(--ink-subtle);">Sistemas auditados, rápidos, documentados e sem legados técnicos.</p>
+                    </div>
+                    <div class="feature-card" style="padding: var(--space-lg); background-color: var(--surface-2);">
+                        <div class="status-badge" style="margin-bottom: var(--space-sm); background: rgba(236,72,153,0.1); border-color: rgba(236,72,153,0.2);"><span class="badge-dot"></span><span style="color: var(--accent); font-size: 11px;">Design Sênior</span></div>
+                        <h4 class="card-title" style="font-size: 16px; margin-bottom: 8px;">Estética & UX</h4>
+                        <p class="body-sm" style="font-size: 12px; color: var(--ink-subtle);">Interfaces deslumbrantes com micro-interações fluidas de alto nível.</p>
+                    </div>
+                    <div class="feature-card" style="padding: var(--space-lg); background-color: var(--surface-2); grid-column: span 2;">
+                        <h4 class="card-title" style="font-size: 18px; margin-bottom: 8px;">Nosso Compromisso Técnico</h4>
+                        <p class="body-sm" style="font-size: 13px; color: var(--ink-subtle);">Cada sprint entregue passa por testes automáticos rigorosos de velocidade e segurança, garantindo estabilidade absoluta sob tráfego intenso e indexação perfeita no Google.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process/Methodology Section -->
+        <section id="metodo" class="pricing-section" style="border-top: 1px solid var(--hairline); padding-top: var(--space-section);">
+            <header class="section-header text-center fade-in-up">
+                <span class="eyebrow">Como Trabalhamos</span>
+                <h2 class="display-md mt-2">Uma Metodologia à Prova de Falhas</h2>
+                <p class="subhead mt-2">Nosso processo transparente garante entregas previsíveis e produtos com acabamento de elite.</p>
+            </header>
+
+            <div class="pricing-grid">
+                <!-- Discovery -->
+                <div class="pricing-card fade-in-up">
+                    <h3 class="card-title">1. Discovery & Design</h3>
+                    <p class="body-sm text-subtle mt-2">Mapeamos as regras de negócio e criamos protótipos interativos no Figma antes de encostar no código.</p>
+                    <ul class="feature-list mt-4">
+                        <li>Figma UI Mockups de alta fidelidade</li>
+                        <li>Projeto de arquitetura técnica</li>
+                        <li>Escopo detalhado sem surpresas</li>
+                    </ul>
+                </div>
+
+                <!-- Active Development -->
+                <div class="pricing-card-featured fade-in-up">
+                    <div class="popular-badge">Sprints Quinzenais</div>
+                    <h3 class="card-title">2. Engenharia Ativa</h3>
+                    <p class="body-sm text-muted mt-2">Desenvolvemos o software em blocos de entrega rápidos, mantendo um ambiente de homologação sempre atualizado.</p>
+                    <ul class="feature-list mt-4">
+                        <li>Código documentado e limpo</li>
+                        <li>Ambiente sandbox para testes ativos</li>
+                        <li>Comunicação transparente no Slack/WhatsApp</li>
+                    </ul>
+                </div>
+
+                <!-- Launch & Scale -->
+                <div class="pricing-card fade-in-up">
+                    <h3 class="card-title">3. Deploy & Evolução</h3>
+                    <p class="body-sm text-subtle mt-2">Lançamos seu sistema em infraestrutura na nuvem robusta com monitoramento completo de bugs e velocidade.</p>
+                    <ul class="feature-list mt-4">
+                        <li>Deploy automatizado via CI/CD</li>
+                        <li>Painéis de monitoramento de performance</li>
+                        <li>Suporte de evolução tecnológica</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Call to Action -->
+        <section class="cta-section fade-in-up">
+            <div class="cta-banner">
+                <h2 class="headline">Vamos tirar sua nova ideia do papel?</h2>
+                <p class="body-lg text-muted">Solicite uma análise preliminar gratuita do seu escopo com nosso time de desenvolvimento sênior.</p>
+                <div class="cta-actions">
+                    <a href="https://wa.me/5588999999999?text=Olá!%20Gostaria%20de%20solicitar%20uma%20análise%20gratuita%20de%20escopo%20do%20meu%20projeto%20com%20a%20Nexus.io." target="_blank" class="button-primary button-large">Agendar Reunião Técnico</a>
+                    <a href="contato.html" class="button-secondary button-large">Falar por E-mail</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <a href="nexusio.html" class="brand-mark mb-2">
+                    <!-- Inline SVG Logo -->
+                    <svg class="logo-svg" width="18" height="18" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 2 L29 26 H3 L16 2 Z" stroke="url(#nexus-grad)" stroke-width="2" stroke-linejoin="round" />
+                    </svg>
+                    <span>Nexus.io</span>
+                </a>
+                <p class="body-sm text-muted">Engenharia de software elegante para quem não aceita o padrão.</p>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <span class="body-sm font-medium text-ink mb-2">Serviços</span>
+                    <a href="saas.html">Desenvolvimento SaaS</a>
+                    <a href="web.html">Aplicações Web</a>
+                    <a href="uiux.html">Design UI/UX</a>
+                </div>
+                <div class="link-column">
+                    <span class="body-sm font-medium text-ink mb-2">Empresa</span>
+                    <a href="nexusio.html#sobre">Sobre o Estúdio</a>
+                    <a href="processo.html">Nosso Processo</a>
+                    <a href="carreiras.html">Carreiras</a>
+                    <a href="contato.html">Contato</a>
+                </div>
+                <div class="link-column">
+                    <span class="body-sm font-medium text-ink mb-2">Social</span>
+                    <a href="https://instagram.com/nexus.io.dev" target="_blank">Instagram</a>
+                    <a href="https://linkedin.com/company/nexusio" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/nexusio" target="_blank">GitHub</a>
+                </div>
+                <div class="link-column">
+                    <span class="body-sm font-medium text-ink mb-2">Legal</span>
+                    <a href="privacidade.html">Privacidade</a>
+                    <a href="termos.html">Termos de Uso</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom mt-6">
+            <p class="caption text-muted">&copy; 2026 Nexus.io. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
